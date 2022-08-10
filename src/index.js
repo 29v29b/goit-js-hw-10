@@ -26,7 +26,7 @@ input.addEventListener('input', debounce( () => {
       } else if(data.length >= 10) {
         Notify.info('Too many matches found. Please enter a more specific name.')
       } else if(1 < data.length && data.length < 10) {
-        listInnerHTML = data.map((elt) => {
+        let listInnerHTML = data.map((elt) => {
           return `<li>
           <p><img src="${elt.flags.svg}" alt="Country flag" width="60px" height="40px">
           ${elt.name.common}</p>
